@@ -1,0 +1,189 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container-home">
+  <img src="/static/images/background.jpg" alt="Snow" style="width: 100%" />
+  <div class="centered">
+    <h1>Welcome to Premier Proffessional Institute </h1>
+
+    {% if session['username'] %}
+    <h3>Let's get started.</h3>
+    {% else %}
+    <p>Already registered? <a href="{{url_for('signIn') }}">Login</a></p>
+    {% endif %}
+  </div>
+</div>
+<!-- <div class="container-home">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="{{ url_for('static',filename='images/dough_1.jpg')}}"
+          alt="Los Angeles"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <h3>Dough Making</h3>
+          <p>Be the best chef the eateries are aspiring for!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static',filename='images/collective_dough_making2.jpg')}}"
+          alt="Chicago"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <h3>Dough Making</h3>
+          <p>Be the best chef the eateries are aspiring for!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="{{ url_for('static',filename='images/making_dough3.jpg')}}"
+          alt="New York"
+          width="1100"
+          height="500"
+        />
+        <div class="carousel-caption">
+          <h3>Women in Tech</h3>
+          <p>Every hustle counts. Women also can tranform tech!</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div><br><hr>
+</div> -->
+<!-- Gallery and items -->
+  <div class="container-gallery">
+    <nav>
+        <ul>
+            <li class="current"><a href="#">All</a></li>
+            <li><a href="#">Electrical</a></li>
+            <li><a href="#">Computer</a></li>
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Accounting</a></li>              
+        </ul>
+    </nav>
+    <div id="projects">
+        <h1 class="heading">institution Gallery</h1>
+        <ul id="gallery">
+            <li class="design"><a href="#"><img src="{{ url_for('static',filename='images/cake.jpg')}}"></a></li>
+            <li class="apps"><a href="#"><img src="{{ url_for('static',filename='images/catering.jpg')}}"></a></li>
+            <li class="back-end"><a href="#"><img src="{{ url_for('static',filename='images/computer.jpg')}}"></a></li>
+            <li class="apps design"><a href="#"><img src="{{ url_for('static',filename='images/cake.jpg')}}"></a></li>
+            <li class="front-end"><a href="#"><img src="{{ url_for('static',filename='images/catering.jpg')}}"></a></li>
+            <li class="front-end design"><a href="#"><img src="{{ url_for('static',filename='images/computer.jpg')}}"></a></li>
+            <li class="apps"><a href="#"><img src="{{ url_for('static',filename='images/cake.jpg')}}"></a></li>
+            <li class="back-end"><a href="#"><img src="{{ url_for('static',filename='images/catering.jpg')}}"></a></li>
+        </ul>
+        </nav>
+    </div>
+    <!-- modal gallery -->
+    <div class="gallery">
+        <a class="close" href="#">
+            <i>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </i>
+        </a>
+        <img src="">
+      </div> 
+  </div>
+
+<!-- Our Services/ offfer -->
+<div class="container">
+  <div class="details">
+    <h2>What Else We Provide</h2>
+    <p>Our institution offers the best accounting, hospitality and business studies</p>
+  </div>
+  <div class="main-box">
+    <div class="box box-grey">
+      <div class="icon">
+        <i class="fas fa-globe"></i>
+      </div>
+      <h2>School of international Hospitality</h2>
+      <hr>
+      <p>Premier Proffessional Institiute aims to impart high-level training to hospitality students through in-class and internship</p>
+    </div>
+
+    <div class="box box-blue">
+      <div class="icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <h2>School of Business Studies</h2>
+      <hr>
+      <p>Get world-class training in business studies. Get taught by the industry experts</p>
+    </div>
+    
+    <div class="box box-grey">
+      <div class="icon">
+        <i class="fas fa-calculator"></i>
+      </div>
+      <h2>School of Accounting</h2>
+      <hr>
+      <p>Premier Proffessional Institiute offers accounting as a course to ensure better decision making by entrepreneurs</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- about us -->
+<br />
+<section>
+  <div class = "image">
+     <img src="{{ url_for('static',filename='images/logo.jpg')}}">
+  </div>
+
+  <div class = "content-about">
+      <h2>About Us</h2>
+      <span><!-- line here --></span>
+      <p>Premier Proffessional Institute is a leading media and hospitality
+        college institution. We offer courses in mass communication,
+        hospitality, business management, accounting and tours & travels. 
+      </p>
+      <p>
+        Our institute has an ultra-modern computer lab, journalism and media
+        recording studio which is well molded to provide an intense
+        apprenticeship environment for our students
+      </p>
+      <p>
+        Our vision is to provide international recognized training at an
+        affordable and pocket-friendly price.
+      </p>
+      <p>
+        Our mission is to impart knowledge, skills and competence so as to
+        produce competent experts in diversified fields.
+      </p>
+      <ul class = "icons" style="color: blue;">
+          <li>
+              <i class = "fa fa-twitter"></i>
+          </li>
+          <li>
+              <i class = "fa fa-facebook"></i>
+          </li>
+          <li>
+              <i class = "fa fa-github"></i>
+          </li>
+          <li>
+              <i class = "fa fa-pinterest"></i>
+          </li>
+      </ul>
+  </div>
+</section><br><br>
+  {% endblock %}
+</section>
+
